@@ -1,0 +1,65 @@
+<html><head><title>link</title>
+<style>
+	#geoloaction{
+		height:500px;
+		width:500px;
+		margin-left:70px;
+		overflow: hidden;
+	}
+
+</style>
+<p>
+<button type = "button" onclick="getGeoLocation()"> Find Geo Location </button> 
+</p>
+	<div id ="out"> </div>
+		<div id="geoloaction"></div>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGUrQiyc0nEZ7afQOC94o1iIMlIhH3n8o"
+        async defer></script>
+	
+	<script>
+	var out= document.getElementById('out');
+	function myFunc(position){
+		
+		
+		var lat = position.coords.latitude;
+		var lon = position.coords.longitude;
+
+		var myPosition = {
+			lat: position.coords.latitude,
+			long: position.coords.longitude
+		};
+
+		var myMap = new google.maps.Map(document.getElementById('geoLocation'),{
+			zoom:10,
+			center: myPosition
+
+		});
+
+		var marker = new google.maps.Marker({
+			position : myPosition,
+			map: myMap
+		});
+
+		var innerhtml ="<p> The latitude is  :"+lat+ "& the longitute is "+lon+"</p>";
+		out.innerHTML = innerhtml; 
+	}
+
+
+	function error(error){
+		var innerhtml = "<p> Could not get the error Location"+error.message+"<p>";
+		out.innerHTML = innerhtml;
+
+	}
+
+	function getGeoLocation(){
+		if(!navigator.geolocation){
+			out.innerHTML = "<p> Geo Location not supported </p>";
+		}else{
+			navigator.geolocation.getCurrentPosition(myFunc,error);
+		}
+	}
+	</script>
+</head>
+</html>

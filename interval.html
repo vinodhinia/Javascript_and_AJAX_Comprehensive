@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<script type = "text/javascript">
+var rn =0;
+var max=10000;
+var interval=null;
+function incrementNum(){
+
+	console.log(rn);
+	rn++;
+	if(rn == max){
+		clearInterval(interval);
+	}
+}
+interval = setInterval(incrementNum,500);
+</script></head></html>

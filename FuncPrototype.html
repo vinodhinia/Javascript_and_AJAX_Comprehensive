@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script type = "text/javascript">
+
+function Gadget(name){
+	this.name = name;
+}
+var toy  = new Gadget("camera");
+console.log(toy.name);
+
+var monkey = {
+	hair:"blue",
+	food:"banaan"
+}
+
+function Human(name){
+	this.name = name;
+}
+
+Human.prototype=monkey;
+
+var george = new Human("George");
+console.log(monkey.isPrototypeOf(george));
+</script>
+
+</head>
+</html>

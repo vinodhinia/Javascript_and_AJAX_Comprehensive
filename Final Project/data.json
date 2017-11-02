@@ -1,0 +1,23 @@
+ [
+  {
+    "name":"Chase",
+    "location":"San Francisco",
+    "contact": "888 000 111"
+  },
+  {
+    "name":"Chase",
+    "location":"San Francisco",
+    "contact": "888 000 111"
+  },
+  {
+    "name":"Bank of America",
+    "location":"Mipitas",
+    "contact": "555 000 111"
+  },
+  {
+    "name":"Capital One",
+    "location":"Santa Clara",
+    "contact": "234 000 111"
+  }
+
+ ]

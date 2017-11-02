@@ -1,0 +1,117 @@
+<html><head><title>link</title>
+    <script type = "text/javascript">
+          function addem() {
+                var x = 2;
+                var y = 3;
+                document.write( x + y , "<br />");
+          }
+          window.color = "Blue";
+          var color = {color:"Red", place:"India" , temp : "Hot"};
+          var o = {
+            color : "Pink",
+            texture : "soft"
+        };
+
+
+          var api = {
+            alertMe : function(){
+              console.log("Texure "+this.texture);
+              console.log("Alerting you the color"+this.color);
+            }
+            ,
+            logMe: function (){
+              alert("LogMe "+this.color);
+              alert(this.place);
+              alert(this.temp);
+            }
+
+          }
+
+          api.alertMe.call(o);
+          api.logMe.call(color);
+
+
+          // Anonymous Self Defined Function
+
+
+          ///Advantages of  IIFES - Imediately Invioked
+          (function(person)
+          {
+            console.log("Anonymous Funtion");
+          })("Vino")
+
+
+
+          function modules(){
+            var secVal =40;
+            return{
+            getSecretValue: function(){
+              return secVal;
+            },
+            setSecretBVal: function(val){
+              secVal = val
+            }}
+
+          }
+          
+
+          var mod = modules();
+          console.log(mod.getSecretValue());
+          mod.setSecretBVal(40);
+          console.log(mod.getSecretValue());
+
+
+          var hero = {};
+          hero.name = "Vino";
+          hero.title = "FE Developer";
+          hero.sayHello = function(){
+            console.log("Hello",hero.name);
+          }
+
+          hero.sayHello();
+
+          var heroine = {
+            name: "Vinodhini",
+            title:"Developer",
+            sayHello: function(){
+              console.log(this.name);
+            }
+          }
+
+          heroine.sayHello();
+
+
+          var person =  function (name,age,title){
+            this.name = name;
+            this.age =age;
+            this.title=title;
+            this.sayHello = myFunc;
+          }
+
+          function myFunc(){
+            alert(this.name);
+          }
+
+          var p = new person("Vinu",25,"DEV");
+          var p1 = new person("Ha",30,"MG");
+          var p3 = new person("ys",2,"Stu");
+
+          p1.sayHello();
+          p3.sayHello();
+
+          alert(p instanceof Object);
+          alert(p1 instanceof Object);
+          alert(p3 instanceof Object);
+
+
+
+          var fido = {breed: 'dog'};
+          var benji = {breed: 'dog'};
+          alert(fido == benji);
+    </script>
+    </head>
+    <body bgcolor = "red">
+          <a href="javascript:addem()" > Click here </a>
+          <h2> Hello to you, world!</h2>
+    </body>
+    </html>

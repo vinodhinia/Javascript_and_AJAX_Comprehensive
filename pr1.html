@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h2> var is function level but not block level
+Where as let and const are fun level
+</h2>
+<p> When tryoing to access let and const outside the function level it throws an error</p>
+</body>
+
+
+<script type="text/javascript">
+        var width = 34;
+        console.log(width)
+
+        function setWidth(){
+        	var width =40;
+        	console.log(width)
+        }
+        setWidth();
+        console.log(width)
+
+        if(width>30){
+        	let dogYears = 54;
+        	
+        }
+        console.log("Dog Years"+dogYears)
+</script>
+
+</html>

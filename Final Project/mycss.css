@@ -1,0 +1,28 @@
+.inputText{
+    
+    box-sizing: border-box;
+	width: 20%;
+}
+.textClass {
+	
+	top: 0px;
+    left: 600px;
+    bottom:50px;
+ 
+ }
+ .result{
+ 	border: none;
+	border-color: transparent;
+}​
+.chart{ 
+	border: solid black 1px; 
+}  
+output { 
+	font-weight: bold; 
+}          
+#graph {
+ border: solid black 1px;
+  }     
+th, td { 
+	vertical-align: top; 
+}  

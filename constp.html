@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h2> var is function level but not block level
+Where as let and const are fun level
+</h2>
+<p> When tryoing to access let and const outside the function level it throws an error</p>
+
+<p> We can Declare var variables multiple times but whereas for let you can just reassign it not to redeclare it</p>
+
+
+</body>
+
+
+<script type="text/javascript">
+        const name = "vino"
+        let weight =80;
+        console.log(name)
+        console.log("weight"+weight)
+
+
+         weight = 70;
+        console.log(weight)
+
+        const person = {
+                name : "Harish",
+                age :32
+        }
+
+        console.log("Person name "+ person.name)
+        console.log("Person age "+person.age)
+
+</script>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<script type = "text/javascript">
+
+Array.prototype.inArray = function(anything) {
+	for(var i=0; len = this.length;i<len;i++){
+		if(this[i] === anything){
+			return true;
+		}
+	}
+	return false;
+};
+
+var a = ["red", "blue", "green"];
+var b= ["orange","apple","banaa"];
+
+alert(a.inArray("green"));
+alert(a.inArray("orange"));
+</script>
+</head>
+</html>

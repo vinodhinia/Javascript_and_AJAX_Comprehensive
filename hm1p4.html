@@ -1,0 +1,33 @@
+<html><head><title>link</title>
+    
+	<body bgcolor="pink">
+	<br/><br/>
+	<div align="center">
+	Enter the Number of paint buckets you want to buy: &nbsp;
+	<input tye="text" id="number"/><br/><br/>
+	Enter the cost of the buckets you want to buy: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+	<input tye="text" id="cost"/><br/><br/>
+	Enter the color of the paint buckets you want to buy: &nbsp; 
+	<input tye="text" id="paintColor"/><br/><br/>
+	<input type="text" id="total" hidden="true">
+	<button value="Submit" onclick=calculatePaintCost()>Submit</button>
+	
+	</div>
+
+	</body>
+	<script type = "text/javascript">
+	   	function calculatePaintCost(){
+	   		var total_cost;
+	   		var no= document.getElementById("number").value;
+	   		var cost= document.getElementById("cost").value;
+	   		var paintColor= document.getElementById("paintColor").value;
+	   		total_cost = no*cost;
+	   		document.body.style.backgroundColor = paintColor;
+	   		alert("Total cost on buying paints is "+total_cost);
+
+
+	   	}
+
+    </script>
+</head>
+</html>

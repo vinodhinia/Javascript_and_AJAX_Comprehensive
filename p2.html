@@ -1,0 +1,40 @@
+<html><head><title>link</title>
+<script type = "text/javascript">
+function shape(){
+	this.name = "Shape";
+	this.toString = function(){
+		alert(this.name);
+	}
+}
+
+
+function towDshap(){
+this.name = "2DShape"
+}
+
+function triangle(){
+	this.name = "Triangle"
+	this.height = 20;
+	this.breadth =23;
+	this.gerArea =function(){
+		return (.5 * this.height * this.breadth);
+	}
+}
+
+function triangle2(){
+this.name = "New Triangle";
+}
+
+towDshap.prototype = new shape();
+triangle.prototype = new towDshap();
+var triangle = new triangle();
+triangle.toString()
+triangle2.prototype = new shape();
+
+var t2 = new triangle2()
+t2.toString();
+
+
+</script>
+</head>
+</html>
